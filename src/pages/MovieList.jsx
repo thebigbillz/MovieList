@@ -6,7 +6,7 @@ const MovieList = () => {
   const imageURL = "https://www.themoviedb.org/t/p/w500";
   const movies = useMovies();
 
-  console.log(movies?.[3]);
+  console.log(movies?.[2]);
   return (
     <div>
       <h1>MovieList</h1>
