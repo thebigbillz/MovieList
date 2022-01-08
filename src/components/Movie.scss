@@ -34,16 +34,17 @@
     }
     .movie-overlay {
       padding: 5rem 3rem;
-
-      h1 {
-        font-size: 2rem;
-      }
-      p {
-        font-size: 1.9rem;
-      }
-      a {
-        padding: 2rem 4rem;
-        font-size: 1.9rem;
+      div {
+        h1 {
+          font-size: 2rem;
+        }
+        p {
+          font-size: 1.9rem;
+        }
+        a {
+          padding: 2rem 4rem;
+          font-size: 1.9rem;
+        }
       }
     }
   }
