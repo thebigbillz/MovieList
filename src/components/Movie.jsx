@@ -51,6 +51,8 @@ const Movie = ({ movie }) => {
             value={movie.vote_average * 10}
             sx={{
               color: "rgba(255, 25, 25, 0.801)",
+              width: "4.5rem",
+              height: "4.5rem",
             }}
           />
           <Box
