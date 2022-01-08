@@ -3,7 +3,7 @@ import Movie from "../components/Movie";
 import { useMovies } from "../context/MovieContext";
 
 const MovieList = () => {
-  const [rawMovies, movies, setMovies] = useMovies();
+  const { movies } = useMovies();
 
   return (
     <div

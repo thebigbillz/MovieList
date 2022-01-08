@@ -4,7 +4,7 @@ import "./SearchBar.scss";
 import SearchIcon from "@mui/icons-material/Search";
 
 const SearchBar = () => {
-  const [search, setSearch] = useSearchContext();
+  const { search, setSearch } = useSearchContext();
   return (
     <div className="search-bar">
       <input

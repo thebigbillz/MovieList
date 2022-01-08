@@ -9,7 +9,7 @@ export const useSearchContext = () => {
 
 export const SearchProvider = ({ children }) => {
   const [search, setSearch] = useState("");
-  const [rawMovies, movies, setMovies] = useMovies();
+  const { rawMovies, setMovies } = useMovies();
 
   const getSearch = () => {
     // setMovies(rawMovies.filter((movie) => movie.title.includes(search)));
@@ -24,7 +24,7 @@ export const SearchProvider = ({ children }) => {
     getSearch();
   }, [search]);
   return (
-    <SearchcContext.Provider value={[search, setSearch]}>
+    <SearchcContext.Provider value={{ search, setSearch }}>
       {children}
     </SearchcContext.Provider>
   );

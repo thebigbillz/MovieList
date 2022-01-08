@@ -12,14 +12,14 @@ function App() {
         <div className="App">
           <section style={{ maxWidth: "144rem", margin: "0 auto" }}>
             <Nav />
-            <br />
+
             <h1
               style={{
                 textAlign: "center",
                 fontSize: "3rem",
                 fontWeight: "500",
                 color: "rgba(255, 25, 25, 0.801)",
-                padding: "2rem",
+                padding: "1rem",
               }}
             >
               Movies in Theatres
