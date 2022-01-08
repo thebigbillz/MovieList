@@ -7,7 +7,7 @@ import Typography from "@mui/material/Typography";
 const Movie = ({ movie }) => {
   const imageURL = "https://www.themoviedb.org/t/p/w500";
   const urlLink = `https://www.themoviedb.org/movie/${movie.id}`;
-  const count = window.innerWidth < 480 ? 500 : 300;
+  const count = window.innerWidth < 480 ? 290 : 290;
   return (
     <div
       className="movie-container"
