@@ -16,7 +16,7 @@ function App() {
             <h1
               style={{
                 textAlign: "center",
-                fontSize: "3rem",
+                fontSize: "2.5rem",
                 fontWeight: "500",
                 color: "rgba(255, 25, 25, 0.801)",
                 padding: "1rem",
