@@ -7,6 +7,7 @@ import Typography from "@mui/material/Typography";
 const Movie = ({ movie }) => {
   const imageURL = "https://www.themoviedb.org/t/p/w500";
   const urlLink = `https://www.themoviedb.org/movie/${movie.id}`;
+  const count = window.innerWidth < 480 ? 500 : 300;
   return (
     <div
       className="movie-container"
@@ -39,8 +40,8 @@ const Movie = ({ movie }) => {
               fontSize: "1.2rem",
             }}
           >
-            {movie.overview.length > 300
-              ? `${movie.overview.substring(0, 300)}...`
+            {movie.overview.length > count
+              ? `${movie.overview.substring(0, count)}...`
               : movie.overview}
           </p>
         </div>
