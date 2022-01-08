@@ -1,0 +1,6 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.89)),
+    url(./assets/home.jpg);
+  background-size: cover;
+}

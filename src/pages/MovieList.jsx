@@ -3,14 +3,23 @@ import Movie from "../components/Movie";
 import { useMovies } from "../context/MovieContext";
 
 const MovieList = () => {
-  const imageURL = "https://www.themoviedb.org/t/p/w500";
-  const movies = useMovies();
+  const [rawMovies, movies, setMovies] = useMovies();
 
-  console.log(movies?.[2]);
   return (
-    <div>
-      <h1>MovieList</h1>
-      <Movie />
+    <div
+      style={{
+        color: "white",
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "center",
+        padding: "1rem 1rem",
+      }}
+    >
+      {movies.map((movie) => (
+        <Movie key={movie.id} movie={movie}>
+          {" "}
+        </Movie>
+      ))}
     </div>
   );
 };

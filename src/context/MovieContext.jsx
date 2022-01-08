@@ -8,14 +8,16 @@ export const useMovies = () => {
 };
 
 export const MovieProvider = ({ children }) => {
+  const [rawMovies, setRawMovies] = useState([]);
   const [movies, setMovies] = useState([]);
 
   const getMovies = async () => {
     const response = await Axios.get(
-      `https://api.themoviedb.org/3/movie/popular?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=${process.env.REACT_APP_API_KEY}&language=en-US&page=1`
     );
     const data = await response.data.results;
-    console.log(data);
+
+    setRawMovies(data);
     setMovies(data);
   };
 
@@ -24,6 +26,8 @@ export const MovieProvider = ({ children }) => {
   }, []);
 
   return (
-    <MovieContext.Provider value={movies}>{children}</MovieContext.Provider>
+    <MovieContext.Provider value={[rawMovies, movies, setMovies]}>
+      {children}
+    </MovieContext.Provider>
   );
 };
